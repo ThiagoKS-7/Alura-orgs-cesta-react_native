@@ -1,8 +1,11 @@
 import { StatusBar, SafeAreaView } from 'react-native'; //importações de bibliotecas
 import Cesta from './src/screens/Cesta'
-import {usefonts,Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat'
+import {Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat'
 import React from 'react';
 import { useFonts } from 'expo-font';
+
+/* MOCKS */
+import mockCesta from "./src/mocks/cesta"
 
 //retorna uma função App
 export default function App() {
@@ -16,7 +19,7 @@ export default function App() {
   return (
       <SafeAreaView>
         <StatusBar/>
-        <Cesta/>
+        <Cesta form ={mockCesta}/>
       </SafeAreaView>
   );
 }
