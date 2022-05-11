@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Image, StyleSheet} from 'react-native';
 import Texto from '../../../../components/Texto'
-import cesta from '../../../../mocks/cesta'
+import Botao from '../atoms/Botao'
 
 export default function Detalhes({form}) {
     return (
@@ -9,12 +9,15 @@ export default function Detalhes({form}) {
             <Texto style={styles.nome}>{form.detalhes.nome}</Texto>
             <View style={styles.fazenda}>
                 <Image source={form.detalhes.imagem} style={styles.imagemFazenda}></Image>
-                <Texto style={styles.nomeFazenda}></Texto>
+                <Texto style={styles.nomeFazenda}>{form.detalhes.nomeFazenda}</Texto>
             </View>
             <Texto style={styles.descricao}>
                 {form.detalhes.descricao}
             </Texto>
             <Texto  style={styles.preco}>{form.detalhes.preco}</Texto>
+            <Botao>
+                {form.detalhes.botao}
+            </Botao>
         </>
     )
 }
@@ -50,5 +53,5 @@ const styles = StyleSheet.create({
         fontSize:26,
         lineHeight:42,
         marginTop:8,
-    }
+    },
 })
