@@ -2,19 +2,12 @@ import React from 'react';
 import Texto from '../../../../components/Texto';
 import { Image, View,StyleSheet } from 'react-native'
 
-export default function Itens({form}) {
+export default function Item({item: {nome,imagem}}) {
     return (
-        <>
-            <Texto style={styles.titulo}>{form.itens.titulo}</Texto>
-            {form.itens.lista.map(({nome, imagem}) => {
-                return <>
-                    <View style={styles.item}>
-                        <Image source={imagem} style={styles.imagem}/>
-                        <Texto key={nome} style={styles.nome}>{nome}</Texto>
-                    </View>
-                </>
-            })}
-        </>
+        <View style={styles.item}>
+            <Image source={imagem} style={styles.imagem}/>
+            <Texto key={nome} style={styles.nome}>{nome}</Texto>
+        </View>
     )
 }
 
@@ -31,7 +24,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         borderBottomWidth: 1,
         borderBottomColor: "#ececec",
-        paddingVertical: 16,
+        padding: 16,
         alignItems: "center",
     },
 
