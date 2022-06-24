@@ -11,4 +11,7 @@
   rode:
   $ npm install ou $yarn
   
-
+## Executando
+  * $npm run/yarn start num terminal e npm run/yarn android, se tiver o android studio instalado;
+  * $npm run/ yarn start num terminal e apontar o cel pro QR code do expo;
+  
